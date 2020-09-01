@@ -3,8 +3,9 @@
 ## Introduction 👋
 
 - 🔭 I’m currently working on [@linkerd](https://www.linkerd.io)
-- 🌱 I’m currently learning @rustlang, and a lot of networking!
+- 🌱 I’m currently learning [@rustlang](https://drive.google.com/file/d/1_59nnsxicU_e9v3B0eI7JnXl0ooNNHtV/view), and a lot of networking!
 - 📫 How to reach me: [@Pothulapati](https://twitter.com/Pothulapati)
+- 📓 My resume can be found [here](https://drive.google.com/file/d/1_59nnsxicU_e9v3B0eI7JnXl0ooNNHtV/view)
 - 😄 Pronouns: He/Him
 
 ## Writings
