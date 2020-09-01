@@ -9,8 +9,8 @@
 
 ## Writings
 
-- [Jaeger integration with Linkerd](/blog-posts/Jaeger-Linkerd-integration.md)
-- [Tracing the Linkerd Control Plane](/blog-posts/linkerd-control-plane-tracing.md)
-- [Google Summer of Code 2019 at Linkerd](/blog-posts/My-GSoC-Journey-with-Linkerd.md)
-- [SMI Metrics with Istio](/blog-posts/istio-metrics-smi.md)
-- [Traffic Splitting in Linkerd using SMI](/blog-posts/Traffic-Splitting-Linkerd.md)
+- [Jaeger integration with Linkerd](https://github.com/Pothulapati/Pothulapati/blob/master/blog-posts/Jaeger-Linkerd-integration.md)
+- [Tracing the Linkerd Control Plane](https://github.com/Pothulapati/Pothulapati/blob/master/blog-posts/linkerd-control-plane-tracing.md)
+- [Google Summer of Code 2019 at Linkerd](https://github.com/Pothulapati/Pothulapati/blob/master/blog-posts/My-GSoC-Journey-with-Linkerd.md)
+- [SMI Metrics with Istio](https://github.com/Pothulapati/Pothulapati/blob/master/blog-posts/istio-metrics-smi.md)
+- [Traffic Splitting in Linkerd using SMI](https://github.com/Pothulapati/Pothulapati/blob/master/blog-posts/Traffic-Splitting-Linkerd.md)
