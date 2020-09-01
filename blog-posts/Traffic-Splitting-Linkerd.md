@@ -1,4 +1,3 @@
-
 ---
 Title: Traffic Splitting in Linkerd using SMI
 date: 2019-08-13
@@ -82,7 +81,34 @@ Now, let's have the reviews service only split traffic to v2 and v3 versions of 
 
 In Linkerd's approach to traffic splitting, services are used as the core primitives. This, we need to create two new review services that correspond to the pods. In the following manifest, two new services `reviews-v2` and `reviews-v3` are created that correspond to the v2 and v3 pods respectively by using label selectors:
 
-<script src="https://gist.github.com/Pothulapati/e94acb41d2e489561ae366bb2340552e.js"></script>
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: reviews-v2
+spec:
+  selector:
+    app: reviews
+    version: v2
+  ports:
+  - protocol: TCP
+    port: 9080
+    targetPort: 9080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: reviews-v3
+spec:
+  selector:
+    app: reviews
+    version: v3
+  ports:
+  - protocol: TCP
+    port: 9080
+    targetPort: 9080
+```
 
 There are two new services created
 
@@ -100,7 +126,19 @@ There are two new services created
 
 Now, let's apply the SMI TrafficSplit CRD, which makes the requests to reviews service split between reviews-v3 and reviews-v2 : 
 
-<script src="https://gist.github.com/Pothulapati/c2b8c33c19f1d945f511c2d6ce16b28d.js"></script>
+```yaml
+apiVersion: split.smi-spec.io/v1alpha1
+kind: TrafficSplit
+metadata:
+  name: reviews-rollout
+spec:
+  service: reviews
+  backends:
+  - service: reviews-v2
+    weight: 500m
+  - service: reviews-v3
+    weight: 500m
+```
 
 This tells Linkerd's control plane that whenever there are requests to the `reviews` service, to split them across the `reviews-v2` and `reviews-v3` based on the weights provided. (In this case, a 50-50 split.)
 
